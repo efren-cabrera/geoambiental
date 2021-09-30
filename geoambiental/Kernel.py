@@ -4,11 +4,11 @@ from sklearn.neighbors import KernelDensity
 from .interfaces import IGeoReference
 
 
-def get_kernel_density_geographic(GeoreferenceObject: IGeoReference, bandwidth=.005, xbins=100, ybins=100, **kwargs):
-    x = np.linspace(GeoreferenceObject.lon.min() - bandwidth*2,
-                    GeoreferenceObject.lon.max() + bandwidth*2, xbins)
-    y = np.linspace(GeoreferenceObject.lat.min() - bandwidth*2,
-                    GeoreferenceObject.lat.max() + bandwidth*2, ybins)
+def get_kernel_density_geographic(GeoreferenceObject: IGeoReference, bandwidth=.005, xbins=100, ybins=100, gap_x=0, gap_y=0, **kwargs):
+    x = np.linspace(GeoreferenceObject.lon.min() - bandwidth*2 - gap_x,
+                    GeoreferenceObject.lon.max() + bandwidth*2 + gap_x, xbins)
+    y = np.linspace(GeoreferenceObject.lat.min() - bandwidth*2 - gap_y,
+                    GeoreferenceObject.lat.max() + bandwidth*2 + gap_y, ybins)
     xgrid, ygrid = np.meshgrid(x, y)
     xy_sample = np.vstack([ygrid.ravel(), xgrid.ravel()]).T
     xy_train = np.vstack([GeoreferenceObject.lat, GeoreferenceObject.lon]).T
