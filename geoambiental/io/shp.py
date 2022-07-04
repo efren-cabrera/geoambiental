@@ -44,10 +44,10 @@ def multi2single(gpdf):
     gpdf_singlepoly = gpdf[gpdf.geometry.type == "Polygon"]
     gpdf_multipoly = gpdf[gpdf.geometry.type == "MultiPolygon"]
 
-    for i, row in gpdf_multipoly.iterrows():
+    for _, row in gpdf_multipoly.iterrows():
         Series_geometries = pd.Series(row.geometry)
         df = pd.concat(
-            [gp.GeoDataFrame(row, crs=gpdf_multipoly.crs).T] * len(Series_geometries),
+            [gp.GeoDataFrame(geometry = row, crs=gpdf_multipoly.crs).T] * len(Series_geometries),
             ignore_index=True,
         )
         df["geometry"] = Series_geometries
