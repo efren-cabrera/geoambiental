@@ -7,7 +7,6 @@ from .. import Grid
 
 
 class TestGrid(unittest.TestCase):
-
     def setUp(self):
         """
         Crea el punto con la coordenada que se utilizará en la prueba
@@ -18,15 +17,15 @@ class TestGrid(unittest.TestCase):
         """
         Verifica que el grid tenga las dimensiones correctas
         """
-        self.assertTrue(self.grid.LON.shape, (2,2))
-        self.assertTrue(self.grid.LAT.shape, (2,2))
+        self.assertTrue(self.grid.LON.shape, (2, 2))
+        self.assertTrue(self.grid.LAT.shape, (2, 2))
 
     def test_X_Y_shape(self):
         """
         Verifica que el grid tenga las dimensiones correctas
         """
-        self.assertTrue(self.grid.X.shape, (2,2))
-        self.assertTrue(self.grid.Y.shape, (2,2))
+        self.assertTrue(self.grid.X.shape, (2, 2))
+        self.assertTrue(self.grid.Y.shape, (2, 2))
 
     def test_lon_lat(self):
         """
@@ -46,8 +45,8 @@ class TestGrid(unittest.TestCase):
         """
         Verifica que la zona utm tenga las dimensiones correctas
         """
-        self.assertTrue(self.grid.utm_zone.shape, (2,2))
+        self.assertTrue(self.grid.utm_zone.shape, (2, 2))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

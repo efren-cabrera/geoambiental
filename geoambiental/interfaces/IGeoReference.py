@@ -7,9 +7,10 @@ class IGeoReference(ABC):
     que tengan coordenadas georeferenciada, no está pensada para rejillas de
     coordenadas
     """
+
     @property
     @abstractmethod
-    def x(self) ->float:
+    def x(self) -> float:
         pass
 
     @property

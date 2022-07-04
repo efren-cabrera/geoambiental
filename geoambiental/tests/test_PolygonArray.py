@@ -8,7 +8,6 @@ from .. import PolygonArray
 
 
 class TestPolygonArray(unittest.TestCase):
-
     def setUp(self):
         """
         Crea el punto con la coordenada que se utilizará en la prueba
@@ -44,5 +43,6 @@ class TestPolygonArray(unittest.TestCase):
     def test_getitem(self):
         self.assertTrue(self.polygon_array[0].lon[0] == -118.25)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

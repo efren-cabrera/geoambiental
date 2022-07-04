@@ -7,7 +7,6 @@ from .. import Map
 
 
 class TestMap(unittest.TestCase):
-
     def setUp(self):
         """
         Crea el punto con la coordenada que se utilizará en la prueba
@@ -21,5 +20,5 @@ class TestMap(unittest.TestCase):
         self.assertTrue(self.map.LON.shape == self.map.value.shape)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

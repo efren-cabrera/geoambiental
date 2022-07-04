@@ -13,6 +13,7 @@ from .Point import Point
 FloatArray = List[float]
 StringArray = List[str]
 
+
 class PointArray(IGeoReference, IGeoReferenceFinite):
     """
     Clase que representa un arreglo de punto georeferenciado en el espacio. Esta
@@ -64,6 +65,7 @@ class PointArray(IGeoReference, IGeoReferenceFinite):
     >>> p.lon_min
     -110.25
     """
+
     def __init__(self, lat, lon):
         self._create_points(lat, lon)
 
@@ -139,4 +141,3 @@ class PointArray(IGeoReference, IGeoReferenceFinite):
     @property
     def lon_max(self) -> float:
         return self.lon.max()
-

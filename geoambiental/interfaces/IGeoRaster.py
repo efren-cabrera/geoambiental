@@ -1,10 +1,12 @@
 from abc import ABC, abstractmethod
 
+
 class IGeoRaster(ABC):
     """
     Esta interfaz la deben cumplir todas aquellas clases que representen objetos
     que estén compuestos por una rejilla de coordenadas georeferenciada
     """
+
     @property
     @abstractmethod
     def LAT(self):

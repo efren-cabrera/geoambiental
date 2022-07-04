@@ -15,6 +15,7 @@ from . import distance_between_points_m
 FloatArray = List[float]
 StringArray = List[str]
 
+
 class Line(IGeoReference, IGeoReferenceFinite):
     def __init__(self, lat, lon):
         self._lon = lon
@@ -47,7 +48,7 @@ class Line(IGeoReference, IGeoReferenceFinite):
 
     @property
     def y(self) -> FloatArray:
-        y = [[utm.from_latlon(lat, lon)[1]] for lat, lon in zip(self._lat, self._lon)]         
+        y = [[utm.from_latlon(lat, lon)[1]] for lat, lon in zip(self._lat, self._lon)]
         return np.column_stack(y)[0]
 
     @property
@@ -91,8 +92,11 @@ class Line(IGeoReference, IGeoReferenceFinite):
     def length_m(self):
         distancia = 0
         for i, (lat, lon) in enumerate(zip(self.lat, self.lon)):
-            if i == len(self.lon) -1: break
-            distancia += distance_between_points_m(Point(lat, lon), Point(self.lat[i+1], self.lon[i+1]))
+            if i == len(self.lon) - 1:
+                break
+            distancia += distance_between_points_m(
+                Point(lat, lon), Point(self.lat[i + 1], self.lon[i + 1])
+            )
         return distancia
 
     @property

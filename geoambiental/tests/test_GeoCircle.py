@@ -8,7 +8,6 @@ from .. import Point
 
 
 class TestGeoCircle(unittest.TestCase):
-
     def setUp(self):
         """
         Crea variables que se usarán en las pruebas
@@ -35,9 +34,12 @@ class TestGeoCircle(unittest.TestCase):
         """
         Verifica que el área se calcule de manera correcta
         """
-        # Se acepta un pequeño error que viene del cálculo numérico del área        
-        self.assertTrue(abs(abs(self.circle.area_m2) - (self.radio**2)*np.pi) <= (self.radio**2)*np.pi*.05)
+        # Se acepta un pequeño error que viene del cálculo numérico del área
+        self.assertTrue(
+            abs(abs(self.circle.area_m2) - (self.radio**2) * np.pi)
+            <= (self.radio**2) * np.pi * 0.05
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

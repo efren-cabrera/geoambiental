@@ -13,6 +13,7 @@ from . import Polygon
 FloatArray = List[float]
 StringArray = List[str]
 
+
 class PolygonArray(IGeoReference):
     """
     Clase que representa un arreglo de geoambiental.Polygon. Este objeto se
@@ -22,7 +23,7 @@ class PolygonArray(IGeoReference):
     ----------
     `PolygonArray : list`
         Lista que contiene un arreglo de geoambiental.Polygon.
-    
+
     Atributos
     ----------
     `x : np.array`
@@ -67,18 +68,18 @@ class PolygonArray(IGeoReference):
         Arreglo con las zonas utm de las coordenadas de todos los polígonos
         separados por un nan.
 
-    
+
     Métodos
     -------
     `in_polygon(polygon: geoambiental.Polygon): PolygonArray`
         Regresa un geoambiental.PolygonArray que contiene los polígonos
         contenidos **completamente** dentro del polígono que se pasa como
         argumento.
-    
+
     Notas
     -----
     None
-    
+
     Ejemplos
     --------
     Se puede obtener un geoambiental.PolygonArray desde un archivo shp:
@@ -88,6 +89,7 @@ class PolygonArray(IGeoReference):
     Para obtener solo el primer polígono del arreglo:
     >>> primer_islote = linea_costa_guadalupe[0] # se obtiene un geoambiental.Polygon
     """
+
     def __init__(self, PolygonArray: list):
         self._polygons = PolygonArray
 
@@ -100,23 +102,33 @@ class PolygonArray(IGeoReference):
 
     @property
     def lon(self) -> FloatArray:
-        return np.concatenate([np.concatenate([poligono.lon, [np.nan]]) for poligono in self._polygons])
+        return np.concatenate(
+            [np.concatenate([poligono.lon, [np.nan]]) for poligono in self._polygons]
+        )
 
     @property
     def lat(self) -> FloatArray:
-        return np.concatenate([np.concatenate([poligono.lat, [np.nan]]) for poligono in self._polygons])
+        return np.concatenate(
+            [np.concatenate([poligono.lat, [np.nan]]) for poligono in self._polygons]
+        )
 
     @property
     def x(self) -> FloatArray:
-        return np.concatenate([np.concatenate([poligono.x, [np.nan]]) for poligono in self._polygons])
+        return np.concatenate(
+            [np.concatenate([poligono.x, [np.nan]]) for poligono in self._polygons]
+        )
 
     @property
     def y(self) -> FloatArray:
-        return np.concatenate([np.concatenate([poligono.y, [np.nan]]) for poligono in self._polygons])
+        return np.concatenate(
+            [np.concatenate([poligono.y, [np.nan]]) for poligono in self._polygons]
+        )
 
     @property
     def utm_zone(self) -> StringArray:
-        return np.concatenate([np.concatenate([poligono.utm_zone, [np.nan]]) for poligono in self._polygons])
+        return np.concatenate(
+            [np.concatenate([poligono.utm_zone, [np.nan]]) for poligono in self._polygons]
+        )
 
     @property
     def x_min(self) -> float:

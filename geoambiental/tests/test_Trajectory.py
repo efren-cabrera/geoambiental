@@ -8,7 +8,6 @@ from .. import Trajectory
 
 
 class TestTrajectory(unittest.TestCase):
-
     def setUp(self):
         """
         Crea el punto con la coordenada que se utilizará en la prueba
@@ -25,5 +24,5 @@ class TestTrajectory(unittest.TestCase):
         self.assertTrue(self.trajectory[0].lat == 23.05)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

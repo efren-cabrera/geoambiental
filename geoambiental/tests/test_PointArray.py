@@ -8,7 +8,6 @@ from .. import PointArray
 
 
 class TestPointArray(unittest.TestCase):
-
     def setUp(self):
         """
         Crea el punto con la coordenada que se utilizará en la prueba
@@ -18,7 +17,7 @@ class TestPointArray(unittest.TestCase):
     def test_utm_coordinate(self):
         """
         Verifica que la coordenada se transforme a UTM de forma correcta
-        """        
+        """
         self.assertTrue(np.allclose(self.p.x, [371938.22957668, 578341.05641097]))
         self.assertTrue(np.allclose(self.p.y, [2549601.77459413, 2237110.74773384]))
 
@@ -33,7 +32,7 @@ class TestPointArray(unittest.TestCase):
         Verifica que la salida de la propiedad utm_zone sea una lista de listas
         donde el primer parámetro corresponda al número de la zona y el segundo
         a la letra
-        """        
+        """
         self.assertEqual(self.p.utm_zone[0][0], "11")
         self.assertEqual(self.p.utm_zone[0][1], "Q")
         self.assertEqual(self.p.utm_zone[1][0], "12")
@@ -69,5 +68,6 @@ class TestPointArray(unittest.TestCase):
         arreglo_puntos = PointArray.from_point_array([punto_1, punto_2])
         self.assertTrue(np.allclose(self.p.x, arreglo_puntos.x))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
