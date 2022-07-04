@@ -47,7 +47,7 @@ def multi2single(gpdf):
     for _, row in gpdf_multipoly.iterrows():
         Series_geometries = pd.Series(row.geometry)
         df = pd.concat(
-            [gp.GeoDataFrame(geometry = row, crs=gpdf_multipoly.crs).T] * len(Series_geometries),
+            [gp.GeoDataFrame(geometry=row, crs=gpdf_multipoly.crs).T] * len(Series_geometries),
             ignore_index=True,
         )
         df["geometry"] = Series_geometries
