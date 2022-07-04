@@ -4,7 +4,7 @@ import json
 
 import numpy as np
 
-from .. import Field
+from geoambiental import Field
 
 
 class TestGrid(unittest.TestCase):
