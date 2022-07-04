@@ -9,7 +9,6 @@ from .. import operations
 
 
 class TestInPolygon(unittest.TestCase):
-
     def setUp(self):
         """
         Crea el punto con la coordenada que se utilizará en la prueba
@@ -23,5 +22,6 @@ class TestInPolygon(unittest.TestCase):
         """
         self.assertTrue(operations.in_polygon(self.p1, self.poligono))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

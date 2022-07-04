@@ -2,6 +2,7 @@ import gpxpy
 
 from ..PointArray import PointArray
 
+
 def read_gpx_waypoints(path: str) -> PointArray:
     """
     Lee un archivo gpx y regresa un geoambiental.PointArray con todos los
@@ -15,7 +16,7 @@ def read_gpx_waypoints(path: str) -> PointArray:
     Notas
     -----
     None
-    
+
     Ejemplos
     --------
     Leer un archivo gpx:
@@ -23,7 +24,7 @@ def read_gpx_waypoints(path: str) -> PointArray:
     Para graficar la colección de polígonos que se cargan se puede usar:
     >>> plt.plot(puntos_madrigueras.lon, puntos_madrigueras.lat)
     """
-    with open(path, 'r') as gpx_file:
+    with open(path, "r") as gpx_file:
         gpx = gpxpy.parse(gpx_file)
     lon = [point.longitude for point in gpx.waypoints]
     lat = [point.latitude for point in gpx.waypoints]

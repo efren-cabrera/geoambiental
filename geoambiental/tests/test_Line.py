@@ -8,21 +8,18 @@ from .. import Line
 
 
 class TestLine(unittest.TestCase):
-
     def setUp(self):
         """
         Crea el punto con la coordenada que se utilizará en la prueba
         """
         self.line = Line([23.05, 22.05], [-118.25, -117.22])
- 
+
     def test_utm_coordinate(self):
         """
         Verifica que la coordenada se transforme a UTM de forma correcta
         """
-        self.assertTrue(np.allclose(
-            self.line.x, [371938.22957668, 477299.34]))
-        self.assertTrue(np.allclose(
-            self.line.y, [2549601.77459413, 2438377.63]))
+        self.assertTrue(np.allclose(self.line.x, [371938.22957668, 477299.34]))
+        self.assertTrue(np.allclose(self.line.y, [2549601.77459413, 2438377.63]))
 
     def test_lon_lat_numpy(self):
         """
@@ -81,9 +78,9 @@ class TestLine(unittest.TestCase):
         """
         punto_1 = Point(23.05, -118.25)
         punto_2 = Point(22.05, -117.22)
-        arreglo_puntos = Line.from_point_array([punto_1, punto_2])        
+        arreglo_puntos = Line.from_point_array([punto_1, punto_2])
         self.assertTrue(np.allclose(self.line.x, arreglo_puntos.x))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

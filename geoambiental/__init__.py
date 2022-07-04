@@ -1,3 +1,6 @@
+"""Geoambiental package"""
+
+__version__ = "0.1.0"
 from .interfaces import *
 from .operations import *
 
@@ -14,5 +17,5 @@ from .Map import Map
 from .PolygonArray import PolygonArray
 from .Trajectory import Trajectory
 
-from .io import read_gpx_waypoints, import_coast_line
+from .io import read_gpx_waypoints, import_coast_line, multi2single
 from .Kernel import get_kernel_density_geographic, get_kernel_density
