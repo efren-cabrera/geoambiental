@@ -1,8 +1,5 @@
 from datetime import datetime
 import unittest
-import json
-
-import numpy as np
 
 from .. import Trajectory
 

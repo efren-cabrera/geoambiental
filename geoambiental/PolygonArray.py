@@ -3,11 +3,10 @@ from __future__ import annotations
 from typing import List
 
 import numpy as np
-import utm
 
 from .interfaces import IGeoReference
-from .Point import Point
 from . import Polygon
+from .PointArray import PointArray
 
 # Documentación de los tipos de retorno
 FloatArray = List[float]

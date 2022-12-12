@@ -7,7 +7,6 @@ import numpy as np
 from . import distance_between_points_m
 from . import IGeoReference
 from . import IGeoReferenceBounded
-from . import IGeoReferenceFinite
 from .Line import Line
 from .Point import Point
 

@@ -3,7 +3,6 @@ from .interfaces import IGeoReferenceBounded
 from .Point import Point
 
 import numpy as np
-import utm
 
 
 class Map(Grid):

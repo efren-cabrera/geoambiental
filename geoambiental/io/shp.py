@@ -32,7 +32,7 @@ def import_coast_line(path: str, projection: str = "epsg:4484") -> PolygonArray:
     poligonos_geograficas = poligonos.to_crs({"init": "epsg:4326"})
     poligonos_geograficas = multi2single(poligonos_geograficas)
     geopoligonos = []
-    for i, poligono in enumerate(poligonos_geograficas.geometry):
+    for _, poligono in enumerate(poligonos_geograficas.geometry):
         linea_costa = poligono.boundary
         lon = linea_costa.coords.xy[0]
         lat = linea_costa.coords.xy[1]

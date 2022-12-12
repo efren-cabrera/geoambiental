@@ -1,7 +1,4 @@
 import unittest
-import json
-
-import numpy as np
 
 from .. import Point
 

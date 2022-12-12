@@ -1,7 +1,4 @@
 import unittest
-import json
-
-import numpy as np
 
 from .. import PointArray
 from .. import get_kernel_density_geographic, get_kernel_density

@@ -1,5 +1,4 @@
 import numpy as np
-import utm
 
 from .interfaces import IGeoReferenceBounded, ITimeReference
 from .Grid import Grid

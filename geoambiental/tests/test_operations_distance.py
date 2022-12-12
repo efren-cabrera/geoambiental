@@ -1,7 +1,4 @@
-import json
 import unittest
-
-import numpy as np
 
 from .. import Point
 from .. import operations

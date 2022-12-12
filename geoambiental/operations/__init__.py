@@ -1,2 +1,2 @@
-from .distance import *
-from .in_polygon import *
+from .distance import *  # noqa
+from .in_polygon import *  # noqa
