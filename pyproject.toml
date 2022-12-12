@@ -17,7 +17,7 @@ requires = [
     "matplotlib",
     "numpy",
     "scipy",
-    "sklearn",
+    "scikit-learn",
     "utm"
 ]
 requires-python=">=3.8"
