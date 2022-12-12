@@ -17,11 +17,8 @@ jobs:
     - name: Corre pruebas y evalúa cobertura
       run: docker run geoambiental make coverage
     - name: Evalúa resistencia a mutaciones
-      run: docker run geoambiental make mutants      
-  build-n-publish:
-    name: Build and publish Python 🐍 distributions 📦 to TestPyPI
-    runs-on: ubuntu-latest
-    steps:
+      run: docker run geoambiental make mutants
+    - name: Build-n-publish
     - uses: actions/checkout@master
     - name: Set up Python 3.9
       uses: actions/setup-python@v1
