@@ -1,6 +1,6 @@
 import unittest
 
-from .. import Point
+from geoambiental import Point
 
 
 class TestPoint(unittest.TestCase):

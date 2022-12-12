@@ -1,8 +1,8 @@
 import unittest
 
-from .. import Point
-from .. import Polygon
-from .. import operations
+from geoambiental import Point
+from geoambiental import Polygon
+from geoambiental import operations
 
 
 class TestInPolygon(unittest.TestCase):

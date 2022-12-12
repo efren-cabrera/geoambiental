@@ -1,7 +1,7 @@
 import unittest
 
-from .. import PointArray
-from .. import get_kernel_density_geographic, get_kernel_density
+from geoambiental import PointArray
+from geoambiental import get_kernel_density_geographic, get_kernel_density
 
 
 class TestKernel(unittest.TestCase):

@@ -1,8 +1,8 @@
 import unittest
 import numpy as np
 
-from .. import Point
-from .. import PointArray
+from geoambiental import Point
+from geoambiental import PointArray
 
 
 class TestPointArray(unittest.TestCase):

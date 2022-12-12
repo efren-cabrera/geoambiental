@@ -1,7 +1,7 @@
 import unittest
 
-from .. import Polygon
-from .. import PolygonArray
+from geoambiental import Polygon
+from geoambiental import PolygonArray
 
 
 class TestPolygonArray(unittest.TestCase):

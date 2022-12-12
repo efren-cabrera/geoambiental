@@ -1,7 +1,7 @@
 from datetime import datetime
 import unittest
 
-from .. import Trajectory
+from geoambiental import Trajectory
 
 
 class TestTrajectory(unittest.TestCase):

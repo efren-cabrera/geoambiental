@@ -1,7 +1,7 @@
 import unittest
 
-from .. import Point
-from .. import operations
+from geoambiental import Point
+from geoambiental import operations
 
 
 class TestDistance(unittest.TestCase):
