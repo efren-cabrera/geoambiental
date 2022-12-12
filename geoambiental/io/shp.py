@@ -42,16 +42,7 @@ def import_coast_line(path: str, projection: str = "epsg:4484") -> PolygonArray:
 
 def multi2single(gpdf):
     gpdf_singlepoly = gpdf[gpdf.geometry.type == "Polygon"]
-    gpdf_multipoly = gpdf[gpdf.geometry.type == "MultiPolygon"]
-
-    for _, row in gpdf_multipoly.iterrows():
-        Series_geometries = pd.Series(row.geometry)
-        df = pd.concat(
-            [gp.GeoDataFrame(geometry=row, crs=gpdf_multipoly.crs).T] * len(Series_geometries),
-            ignore_index=True,
-        )
-        df["geometry"] = Series_geometries
-        gpdf_singlepoly = pd.concat([gpdf_singlepoly, df])
-
+    gpdf_multipoly = gpdf[gpdf.geometry.type == "MultiPolygon"].explode(index_parts=True)
+    gpdf_singlepoly = pd.concat([gpdf_singlepoly, gpdf_multipoly])
     gpdf_singlepoly.reset_index(inplace=True, drop=True)
     return gpdf_singlepoly
