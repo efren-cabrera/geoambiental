@@ -25,9 +25,6 @@ check:
 	black --check --line-length 100 ${module}/tests
 	flake8 --max-line-length 100 ${module}
 	flake8 --max-line-length 100 ${module}/tests
-	mypy ${module}
-	mypy src
-	mypy tests
 
 clean:
 	rm --force --recursive ${module}.egg-info
