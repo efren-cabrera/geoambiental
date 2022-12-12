@@ -32,7 +32,8 @@ class TestPolygonArray(unittest.TestCase):
         self.assertEqual(self.polygon_array.y_min, 1903132.6462591637)
 
     def test_x_max(self):
-        self.assertEqual(self.polygon_array.x_max, 671600.327190813)
+        decimal_place = 3
+        self.assertAlmostEqual(self.polygon_array.x_max, 671600.327190813, decimal_place)
 
     def test_y_max(self):
         self.assertEqual(self.polygon_array.y_max, 3131678.287325614)
