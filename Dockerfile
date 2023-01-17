@@ -3,6 +3,7 @@ WORKDIR /workdir
 COPY . .
 RUN pip install --upgrade pip && pip install \
     black \
+    utm \
     codecov \
     flake8 \
     mutmut \
