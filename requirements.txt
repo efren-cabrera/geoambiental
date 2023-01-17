@@ -2,9 +2,10 @@ black
 utm
 codecov
 flake8
+geopy
+matplotlib
 mutmut
 mypy
 pylint
 pytest
 pytest-cov
-geopy

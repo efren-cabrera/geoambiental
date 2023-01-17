@@ -6,6 +6,7 @@ RUN pip install --upgrade pip && pip install \
     codecov \
     flake8 \
     geopy \
+    matplotlib \
     mutmut \
     mypy \
     pylint \
