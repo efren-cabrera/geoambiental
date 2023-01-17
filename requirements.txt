@@ -1,0 +1,15 @@
+black
+utm
+codecov
+flake8
+geoarea
+geopandas
+geopy
+gpxpy
+matplotlib
+mutmut
+mypy
+pylint
+pytest
+pytest-cov
+scikit-learn
