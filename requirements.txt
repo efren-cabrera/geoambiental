@@ -3,6 +3,7 @@ utm
 codecov
 flake8
 geoarea
+geopandas
 geopy
 gpxpy
 matplotlib
