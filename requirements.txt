@@ -2,6 +2,7 @@ black
 utm
 codecov
 flake8
+geoarea
 geopy
 matplotlib
 mutmut
