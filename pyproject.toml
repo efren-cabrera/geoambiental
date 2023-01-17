@@ -9,15 +9,6 @@ classifiers = [ "License :: OSI Approved :: GNU General Public License v3 or lat
 description-file = "README.md"
 home-page = "https://github.com/IslasGECI/geoambiental"
 module = "geoambiental"
-requires = [
-    "geoarea",
-    "geopandas",
-    "geopy",
-    "gpxpy",
-    "matplotlib",
-    "numpy",
-    "scipy",
-    "scikit-learn",
-    "utm"
-]
 requires-python=">=3.8"
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
