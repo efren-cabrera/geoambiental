@@ -4,6 +4,7 @@ codecov
 flake8
 geoarea
 geopy
+gpxpy
 matplotlib
 mutmut
 mypy
