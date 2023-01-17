@@ -7,3 +7,4 @@ mypy
 pylint
 pytest
 pytest-cov
+geopy
