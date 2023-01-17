@@ -12,3 +12,4 @@ mypy
 pylint
 pytest
 pytest-cov
+sklearn
